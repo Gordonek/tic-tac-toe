@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/xo.png" type="image/x-icon">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="tic-tac-toe">
+        <div id="player">
+            <p>KOLEJKA GRACZA</p>
+            <img src="images/x.png" id="player-x" class="invisible">
+            <img src="images/o.png" id="player-o" class="">
+        </div>
+        <div id="main">
+            <div id="board">
+                <div id="lineX1" class="line lineX"></div>
+                <div id="lineX2" class="line lineX"></div>
+                <div id="lineX3" class="line lineX"></div>
+                <div id="lineY1" class="line lineY"></div>
+                <div id="lineY2" class="line lineY"></div>
+                <div id="lineY3" class="line lineY"></div>
+                <div id="lineZ1" class="line lineZ"></div>
+                <div id="lineZ2" class="line lineZ"></div>
+                <div id="row1">
+                    <div id="box1" class="box" style="border-bottom:4px solid black; border-right: 4px solid black; border-top-left-radius: 20px;" onclick="game(0)">
+                        <img src="images/x.png" class="invisible x">
+                        <img src="images/o.png" class="invisible o">
+                    </div>
+                    <div id="box2" class="box" style="border-bottom:4px solid black; border-right: 4px solid black;" onclick="game(1)">
+                        <img src="images/x.png" class="invisible x">
+                        <img src="images/o.png" class="invisible o">
+                    </div>
+                    <div id="box3" class="box" style="border-bottom:4px solid black; border-top-right-radius: 20px;" onclick="game(2)">
+                        <img src="images/x.png" class="invisible x">
+                        <img src="images/o.png" class="invisible o">
+                    </div>
+                </div>
+                <div id="row2">
+                    <div id="box4" class="box" style="border-bottom:4px solid black; border-right: 4px solid black;" onclick="game(3)">
+                        <img src="images/x.png" class="invisible x">
+                        <img src="images/o.png" class="invisible o">
+                    </div>
+                    <div id="box5" class="box" style="border-bottom:4px solid black; border-right: 4px solid black;" onclick="game(4)">
+                        <img src="images/x.png" class="invisible x">
+                        <img src="images/o.png" class="invisible o">
+                    </div>
+                    <div id="box6" class="box" style="border-bottom:4px solid black;" onclick="game(5)">
+                        <img src="images/x.png" class="invisible x">
+                        <img src="images/o.png" class="invisible o">
+                    </div>
+                </div>
+                <div id="row3">
+                    <div id="box7" class="box" style="border-right: 4px solid black; border-bottom-left-radius: 20px;" onclick="game(6)">
+                        <img src="images/x.png" class="invisible x">
+                        <img src="images/o.png" class="invisible o">
+                    </div>
+                    <div id="box8" class="box" style="border-right: 4px solid black;" onclick="game(7)">
+                        <img src="images/x.png" class="invisible x">
+                        <img src="images/o.png" class="invisible o">
+                    </div>
+                    <div id="box9" class="box" style="border-bottom-right-radius: 20px;" onclick="game(8)">
+                        <img src="images/x.png" class="invisible x">
+                        <img src="images/o.png" class="invisible o">
+                    </div>
+                </div>
+            </div>
+            <div id="reset-buton">
+                <button onclick="resetBoard()">RESET</button>
+            </div>
+        </div>
+        <div id="score">
+            <p class="napisWynik">WYNIK</p>
+            <div id="wynik">
+                <div class="red"><p>0</p></div>
+                <div class="middle">:</div>
+                <div class="blue"><p>0</p></div>
+            </div>
+        </div>
+    </div>
+    <img src="images/name.png" class="logo leftLogo">
+    <img src="images/name.png" class="logo rightLogo" onclick="easterEgg()">
+    <script src="js/game.js"></script>
+</body>
+</html>

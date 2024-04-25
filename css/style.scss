@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;800;900&display=swap');
+@import "animations/animations.scss";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#tic-tac-toe{
+    .invisible{
+        display: none;
+    }
+    #player{
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p{
+            font-size: 40px;
+            font-weight: 700;
+            text-shadow: 0 0 3px black;
+        }
+        img{
+            width: 80px;
+            height: 80px;
+        }
+    }
+    #main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .box{
+            width: 140px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: rgb(245, 245, 245);
+            img{
+                width: 80px;
+                height: 80px;
+            }
+        }
+        #row1,#row2,#row3{
+            display: flex;
+        }
+        #reset-buton{
+            margin: 20px;
+            button{
+                font-size: 25px;
+                font-weight: 700;
+                padding: 10px 100px;
+                border: 3px solid black;
+                background-color: rgb(165, 165, 165);
+                box-shadow: 0 0 7px 0.5px black;
+                border-radius: 10px;
+                transition: 300ms;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: gray;
+            }
+        }
+        #board{
+            position: relative;
+            .line{
+                z-index: 5;
+                background-color: black;
+                height: 9px;
+                border-radius: 10px;
+                position: absolute;
+            }
+            .lineX{
+                width: 0px;
+            }
+            .lineX{
+                left: 20px;
+            }
+            #lineX1{
+                top: 64px;
+            }
+            #lineX2{
+                top: 204px;
+            }
+            #lineX3{
+                top: 346px;
+            }
+            .lineY{
+                height: 0;
+                width: 9px;
+                top: 20px;
+            }
+            #lineY1{
+                left: 64px;
+            }
+            #lineY2{
+                left: 204px;
+            }
+            #lineY3{
+                left: 346px;
+            }
+            .lineZ{
+                width: 0px;
+                transform: rotate(45deg);
+            }
+            #lineZ2{
+                transform: rotate(135deg);
+            }
+        }
+    }
+    #score{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .napisWynik{
+            text-shadow: 0 0 3px black;
+            font-size: 40px;
+            font-weight: 700;
+        }
+        #wynik{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            div{
+                text-shadow: 0 0 3px black;
+                font-size: 40px;
+                font-weight: 700;
+                display: flex;
+            }
+            .red p,.blue p{
+                font-size: 70px;
+            }
+            .red{
+                color: #e11500;
+                width: 48%;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                padding-right: 4px;
+            }
+            .middle{
+                width: 4%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .blue{
+                color: #0383fb;
+                width: 48%;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                padding-left: 4px;
+            }
+        }
+    }
+}
+.logo{
+    width: 300px;
+    position: absolute;
+    transition: 1000ms;
+}
+.logo:hover{
+    transform: scale(1.05)
+}
+.leftLogo{
+    left: 10%;
+}
+.rightLogo{
+    right: 10%;
+}
+@media (max-width:1400px) {
+    *{
+        overflow: hidden;
+    }
+    .logo{
+        display: none;
+    }
+}
